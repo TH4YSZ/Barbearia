@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+</head>
+<body>
+    <h2>Agendamento</h2>
+    <form action="/agendar" method="POST">
+        <label for="cliente_id">ID do Cliente:</label><br>
+        <input type="text" id="cliente_id" name="cliente_id"><br>
+        <label for="data">Data do Agendamento:</label><br>
+        <input type="datetime-local" id="data" name="data"><br><br>
+        <input type="submit" value="Agendar">
+    </form>
+</body>
+</html>
