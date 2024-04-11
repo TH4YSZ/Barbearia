@@ -9,19 +9,20 @@
 </head>
 <body class="fundoD">
     <nav class="navbar">
-        <div class="container-md">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <div class="container">
+            <img src="/venv/statics/img/OIG.jpg" alt="Logo">
+            <a class="navbar-brand" href="/venv/templates/index.html">Barbearia do Kariwa</a>
         </div>
     </nav>
 
     <div class="formulario">
-        <h2 class="login-title">Login </h2>
-        <form class="meioform login-form" action="http://127.0.0.1:5000/agendar">
-            <label for="login" class="textoform">Email:</label>
-            <input type="text" name="email" placeholder="Email de usuário">
-            <label for="senha" class="textoform">Senha:</label>
-            <input type="password" name="password" placeholder="Senha">
-            <input type="submit" value="Login">
+        <h2 class="login-title">Login <img src="../statics/img/barbearia icone.png" alt=""></h2>
+        <form class="login-form" action="http://127.0.0.1/login">
+            <label class="textoform">Email:</label>
+            <input for="email" type="text" name="email" placeholder="Inserir email" class="inputinfo">
+            <label class="textoform" >Senha:</label>
+            <input for="senha" type="password" name="password" placeholder="Inserir senha" class="inputinfo">
+            <input type="submit" value="Login" href="agendamento.html" class="button">
             <span class="links">Esqueceu a senha?<a href="cadastro.html" class="links">Cadastre-se</a></span>
         </form>
     </div>

@@ -14,10 +14,10 @@ class Cliente:
 
 
 class Agendamento:
-    def agendamento(self, servico_id, cliente_id):
-        return dao.agendar()
+    def agendamento(self, data, horario, servico_id, cliente_id):
+        return dao.agendar_horario(data, horario, servico_id, cliente_id)
 
 class Login:
     def autenticar():
-        return(dao.login_autenticar())
+        return(dao.consultar_clientes())
     

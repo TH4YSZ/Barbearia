@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
-from model import Cliente, Agendamento, Login
-import mysql.connector
+from model import Agendamento
+
 
 app = Flask(__name__)
 
@@ -13,15 +13,13 @@ def home():
 @app.route('/login', methods=['POST'])
 def login_post():
     email = request.form['email']
-    senha = request.form['password']
+    senha = request.form['senha']
 
-    login_model = Login()
-
-    dados_banco = login_model.autenticar()
+    cliente = (email, senha)
         
     # Lógica para autenticação (Login)
-    for dados in dados_banco:
-        if dados['email'] == email and dados['senha'] == senha:
+    for dados in cliente:
+        if dados['1'] == email and dados['2'] == senha:
             return True
         else:
             return jsonify({'mensagem': 'Email ou senha inválidos'})
@@ -30,29 +28,30 @@ def login_post():
     return render_template('login.html', mensagem=mensagem)
 
 
-@app.route('/agendar', methods=['PUT'])
+@app.route('/agendar', methods=['POST'])
 def agendar():
     data = request.form['data']
+    horario = request.form['hora']
+    servico_id = request.form['servico_id']
     cliente_id = request.form['id']
 
     agendar_model = Agendamento()
-    agendar_model.agendamento(data, cliente_id)
+    agendar_model.agendamento(data, horario, servico_id, cliente_id)
     return render_template('agendamento.html')
 
 @app.route('/cadastro', methods=['PUT'])
 def cadastrar():
-    nome = request.form['email']
+    nome = request.form['nome']
     email = request.form['email']
     senha = request.form['senha']
     telefone = request.form['telefone']
 
-    cad_model = Cliente()
+    cad_model = cadastrar()
 
-    if cad_model.cadastrar_cliente(nome, email, senha, telefone) == True:
-        return render_template('agendamento.html')
+    if cad_model.cadastrar_cliente(nome, email, senha, telefone):
+        return render_template('cadastro.html')
     else:
-        return('Erro no cadastro.')
-
+        return jsonify({'mensagem': 'Erro ao cadastrar cliente'})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True)

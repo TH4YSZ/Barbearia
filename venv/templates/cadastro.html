@@ -10,22 +10,23 @@
 </head>
 <body class="fundoD">
     <nav class="navbar">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">BK</span>
+        <div class="container">
+            <img src="/venv/statics/img/OIG.jpg" alt="Logo">
+            <a class="navbar-brand" href="/venv/templates/index.html">Barbearia do Kariwa</a>
         </div>
     </nav>
     <div class="formulario">
         <h2 class="login-title">Cadastre-se </h2>
-        <form class="meioform login-form" action="http://127.0.0.1:5000/agendar">
+        <form class="login-form" action="http://127.0.0.1:5000/agendar">
             <label for="login" class="textoform">Nome:</label>
-            <input type="text" name="nome" placeholder="Nome de usuário">
+            <input type="text" name="nome" class="inputinfo" id="nome">
             <label for="telefone" class="textoform">Telefone:</label>
-            <input type="text" name="telefone" placeholder="Telefone de usuário">
+            <input type="text" name="telefone" class="inputinfo" id="telefone">
             <label for="login" class="textoform">Email:</label>
-            <input type="text" name="email" placeholder="Email de usuário">
+            <input type="text" name="email" class="inputinfo" id="email" >
             <label for="senha" class="textoform">Senha:</label>
-            <input type="password" name="password" placeholder="Senha">
-            <input type="submit" value="Cadastre-se">
+            <input type="password" name="password" class="inputinfo" id="senha">
+            <input type="submit" value="Cadastre-se" class="button">
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
