@@ -48,12 +48,21 @@ body {
 .navbar {
     background-color: #323341;
     color: #fff;
+    height: 80px;
 }
 
 .navbar a {
     color: #fff;
 }
 
+.btn {
+    background-color: #323341;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .container img {
     width: 60px;
     height: 60px;
@@ -136,6 +145,7 @@ hr {
 
 .links{
     display: flex;
+    flex-direction:row;
     justify-content: space-between;
     text-decoration: none;
     color: black;
@@ -165,6 +175,40 @@ hr {
     border-style: none;
     padding-left: 10px;
     margin-bottom: 10px;
-    height: 40px;
-    
+    height: 40px;   
+}
+
+.creditos{
+    background-color: #323341;
+    height: 100vh;
+    width: 560px;
+    left:0;
+    color: white;
+}
+
+.cortes{
+    right: 60vh;
+}
+
+.agendamento{
+    display: inline-block
+}
+
+span{
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.perfil{
+    background-color: #323341;
+    border-radius: 25px;
+    font-size: 40px;
+    margin-left: 5px;
+    right: 60vh;
+    color: white;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
 }

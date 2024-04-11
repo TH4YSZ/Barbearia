@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex; /* Adiciona display flex para alinhar os elementos lado a lado */
+}
+
+/* header e a parte esquerda principal da tela */
+
+header {
+    background-color: #323341;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 350px;
+    height: 100vh;
+}
+
+header img{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+header h1{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+main {
+    margin-top: 10px;
+    color: #333;
+    margin-left: 15px;
+    flex: 1; /* Faz a <main> ocupar todo o espaço restante */
+}
+
+main h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 40px;
+}
+
+main img{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #323341;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center; 
+    text-decoration: none; 
+    color: #fff;
+    margin-left: 25px;
+}
+
+.footer-link .material-symbols-outlined {
+    font-size: 24px; 
+    margin-right: 10px;
+    color: #fff; 
+    transition: transform 0.2s ease-in-out; 
+}
+
+.footer-link .material-symbols-outlined:hover {
+    transform: scale(1.1); 
+}
+
+.footer-link .bi {
+    font-size: 24px; 
+    margin-right: 10px;
+    color: #fff; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-link .bi:hover {
+    transform: scale(1.1); 
+}
+
+/* navbar e a parte direita principal da tela */
+
+.navbar {
+    background-color: #323341;
+    color: #fff;
+    padding: 10px;
+    width: 1100px;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    padding-right: 20px; /* Adiciona espaço à direita para o círculo do perfil */
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%; /* Torna o elemento um círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle i {
+    color: #323341; /* Cor do ícone */
+}
+
+.user{
+    margin-left: 990px;
+    margin-right: 10px;
+}

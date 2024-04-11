@@ -4,16 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento</title>
-    <link rel="stylesheet" href="../statics/style.css">
+    <link rel="stylesheet" href="../statics/agendamento.css">
 </head>
-<body class="fundoD">
-    <h2>Agendamento</h2>
-    <form action="http://127.0.0.1:5000/agendar" method="POST">
-        <label for="cliente_id">ID do Cliente:</label><br>
-        <input type="text" id="cliente_id" name="cliente_id"><br>
-        <label for="data">Data do Agendamento:</label><br>
-        <input type="datetime-local" id="data" name="data"><br><br>
-        <input type="submit" value="Agendar">
-    </form>
+<body>
+    <header>
+        <img src="/venv/statics/img/image.png" alt="Logo SENAI">
+        <h2>BK</h2>
+        <h1>SENAI Conde Alexandre Siciliano</h1>
+        <p>Jundiai</p>
+        <hr>
+
+        <a href="#" class="footer-link">
+            <span class="material-symbols-outlined">location_on</span> 
+            <p>Av. Antonio Frederico Ozanan, 6000</p>
+        </a>
+        <a href="#" class="footer-link">
+            <span class="material-symbols-outlined">phone</span> 
+            <p>+55 11 97424-4480</p>
+        </a>
+        <a href="#" class="footer-link">
+            <span class="material-symbols-outlined">schedule</span> 
+            <p>Aberto até as 19:00h</p>
+        </a>
+        <a href="#" class="footer-link">
+            <span class="material-symbols-outlined">email</span> 
+            <p>@barbeariabkgp3DEV.gmail.com</p>
+        </a>
+
+        <hr>
+
+        <div class="icons-boot">
+            <a href="#" class="footer-link">
+                <i class="bi bi-facebook"></i>
+                <p>Facebook</p>
+            </a>
+            <a href="#" class="footer-link">
+                <i class="bi bi-instagram"></i>
+                <p>Instagram</p>
+            </a>
+            <a href="#" class="footer-link">
+                <i class="bi bi-pinterest"></i>
+                <p>Pinterest</p>
+            </a>
+        </div>
+
+    </header>
+
+    <main>
+        <nav class="navbar">
+            <p class="user">Usuario</p>
+            <div class="profile-circle">
+                <i class="bi bi-person"></i>
+            </div>
+        </nav>
+        <h2>Qual serviço deseja agendar?</h2>
+        <nav class="navbar">
+            <img src="/venv/statics/img/image.png" alt="">
+            <a href="#"><p>Escova - R$ 40,00</p></a>
+        </nav>
+        <nav class="navbar">
+            <img src="/venv/statics/img/image.png" alt="">
+            <a href="#"><p>Corte Masculino - R$ 20,00</p></a>
+        </nav>
+        <nav class="navbar">
+            <img src="/venv/statics/img/image.png" alt="">
+            <a href="#"><p>Corte Feminino - R$ 30,00</p></a>
+        </nav>
+        <nav class="navbar">
+            <img src="/venv/statics/img/image.png" alt="">
+            <a href="#"><p>Corte Infantil - R$ 15,00</p></a>
+        </nav>
+        <h2>Meus agendamentos</h2>
+        <ul>
+            <li>Escova - R$ 40,00</li>
+        </ul>
+    </main>
 </body>
 </html>

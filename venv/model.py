@@ -1,23 +1,19 @@
-from dao import DAO
-
-dao = DAO()
+from dao import ConsultarDao, AgendarDao
 
 class Cliente:
-    def __init__(self, nome, telefone, email, senha):
-        self.nome = nome
-        self.email = email
-        self.senha = senha
-        self.telefone = telefone
+    @staticmethod
+    def consultar_clientes():
+        return ConsultarDao.consultar_clientes()
 
-    def cadastrar_cliente(self):
-        return(dao.cadastrar_cliente(self.nome, self.email, self.senha, self.telefone))
-
+    @staticmethod
+    def adicionar_cliente(nome, telefone, email, senha):
+        return AgendarDao.adicionar_cliente(nome, email, senha, telefone)
 
 class Agendamento:
-    def agendamento(self, data, horario, servico_id, cliente_id):
-        return dao.agendar_horario(data, horario, servico_id, cliente_id)
+    @staticmethod
+    def consultar_agendamentos():
+        return ConsultarDao.consultar_agendamentos()
 
-class Login:
-    def autenticar():
-        return(dao.consultar_clientes())
-    
+    @staticmethod
+    def agendar_horario(data, horario, barbeiro):
+        return AgendarDao.agendar_horario(data, horario, barbeiro)
